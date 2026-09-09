@@ -799,33 +799,61 @@
   <div class="no-results" id="no-results">No articles match this filter.</div>
 
   <!-- FEATURED: A Brief Memoir (NEW) -->
-  <div class="featured-article"
+   <div class="featured-article"
+    data-genres="alt rock shoegaze emo"
+    data-locations="los angeles california"
+    data-artists="myveronica">
+    <img src="i hope theres music in heaven.jpg" alt="I Hope There's Music in Heaven" class="featured-image"/>
+    <div class="featured-body">
+      <div class="featured-date">September 09, 2026</div>
+      <div class="featured-title">I Hope There's Music in Heaven - MyVeronica</div>
+      <div class="featured-tags">
+        <span class="tag">Review</span>
+        <span class="tag">Alt Rock</span>
+        <span class="tag">Emo</span>
+        <span class="tag">Shoegaze</span>
+        <span class="tag">Los Angeles</span>
+        <span class="tag">California</span>
+      </div>
+      <div class="featured-preview">
+        A little article about LA band MyVeronica's debut album.
+      </div>
+      <span class="read-more-btn" onclick="openArticle('myveronica-review')">Read Full Article</span>
+    </div>
+  </div>
+
+
+  <!-- SIDE ARTICLES -->
+  <div class="side-articles">
+  
+    <!-- A Brief Memoir -->
+    <div class="side-article" id="side-0"
     data-genres="slowcore emo"
     data-locations="denton texas"
     data-artists="a-brief-memoir">
-    <img src="A Brief Memoir Album Artwork.jpg" alt="A Brief Memoir album art" class="featured-image"/>
-    <div class="featured-body">
-      <div class="featured-date">August 11, 2026</div>
-      <div class="featured-title">A Brief Memoir - Self-Titled</div>
-      <div class="featured-tags">
+    <img src="A Brief Memoir Album Artwork.jpg" alt="A Brief Memoir album art" class="side-image"/>
+    <div class="side-body">
+      <div class="side-date">August 11, 2026</div>
+      <div class="side-title">A Brief Memoir - Self-Titled</div>
+      <div class="side-tags">
         <span class="tag">Review</span>
         <span class="tag">Slowcore</span>
         <span class="tag">Emo</span>
         <span class="tag">Denton</span>
         <span class="tag">Texas</span>
       </div>
-      <div class="featured-preview">
+      <div class="side-preview">
         A little article about A Brief Memoir's beuatiful self-titled debut album
       </div>
-      <span class="read-more-btn" onclick="openArticle('a-brief-memoir-review')">Read Full Article</span>
-    </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
+          <span class="read-more-btn" onclick="openArticle('a-brief-memoir-review')">Read Full Article</span>
+          <span class="side-toggle" onclick="toggleSide('side-0')">+</span>
+      </div>    
+      </div>
   </div>
 
-  <!-- SIDE ARTICLES -->
-  <div class="side-articles">
-
-    <!-- Toothpick (moved down from featured) -->
-    <div class="side-article" id="side-toothpick"
+    <!-- Toothpick -->
+    <div class="side-article" id="side-1"
       data-genres="alternative-metal nu-metal industrial-rock"
       data-locations="dallas texas"
       data-artists="toothpick">
@@ -846,13 +874,13 @@
         </div>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
           <span class="read-more-btn" onclick="openArticle('toothpick-interview')">Read Full Article</span>
-          <span class="side-toggle" onclick="toggleSide('side-toothpick')">+</span>
+          <span class="side-toggle" onclick="toggleSide('side-1')">+</span>
         </div>
       </div>
     </div>
 
     <!-- Dead Butterflies -->
-    <div class="side-article" id="side-0"
+    <div class="side-article" id="side-2"
       data-genres="screamo skramz electronic emo"
       data-locations="fort-worth texas"
       data-artists="dead-butterflies">
@@ -874,13 +902,13 @@
         </div>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
           <span class="read-more-btn" onclick="openArticle('dead-butterflies-review')">Read Full Article</span>
-          <span class="side-toggle" onclick="toggleSide('side-0')">+</span>
+          <span class="side-toggle" onclick="toggleSide('side-2')">+</span>
         </div>
       </div>
     </div>
 
     <!-- Folder -->
-    <div class="side-article" id="side-1"
+    <div class="side-article" id="side-3"
       data-genres="nu-metal rap-metal"
       data-locations="italy"
       data-artists="folder">
@@ -899,7 +927,7 @@
         </div>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px;">
           <span class="read-more-btn" onclick="openArticle('folder-review')">Read Full Article</span>
-          <span class="side-toggle" onclick="toggleSide('side-1')">+</span>
+          <span class="side-toggle" onclick="toggleSide('side-3')">+</span>
         </div>
       </div>
     </div>
@@ -913,12 +941,14 @@
     <div class="sidebar-title">Genre</div>
     <ul class="sidebar-list">
       <li><a href="#" onclick="filterArticles('genre','alternative-metal'); return false;">Alternative Metal</a><span>(1)</span></li>
+      <li><a href="#" onclick="filterArticles('genre','alternative-rock'); return false;">Alternative Rock</a><span>(1)</span></li>
       <li><a href="#" onclick="filterArticles('genre','electronic'); return false;">Electronic</a><span>(1)</span></li>
-      <li><a href="#" onclick="filterArticles('genre','emo'); return false;">Emo</a><span>(2)</span></li>
+      <li><a href="#" onclick="filterArticles('genre','emo'); return false;">Emo</a><span>(3)</span></li>
       <li><a href="#" onclick="filterArticles('genre','industrial-rock'); return false;">Industrial Rock</a><span>(1)</span></li>
       <li><a href="#" onclick="filterArticles('genre','nu-metal'); return false;">Nu Metal</a><span>(2)</span></li>
       <li><a href="#" onclick="filterArticles('genre','rap-metal'); return false;">Rap Metal</a><span>(1)</span></li>
       <li><a href="#" onclick="filterArticles('genre','screamo'); return false;">Screamo</a><span>(1)</span></li>
+      <li><a href="#" onclick="filterArticles('genre','shoegaze'); return false;">Shoegaze</a><span>(1)</span></li>
       <li><a href="#" onclick="filterArticles('genre','skramz'); return false;">Skramz</a><span>(1)</span></li>
       <li><a href="#" onclick="filterArticles('genre','slowcore'); return false;">Slowcore</a><span>(1)</span></li>
     </ul>
@@ -930,7 +960,9 @@
       <li><a href="#" onclick="filterArticles('location','denton'); return false;">Denton</a><span>(1)</span></li>
       <li><a href="#" onclick="filterArticles('location','fort-worth'); return false;">Fort Worth</a><span>(1)</span></li>
       <li><a href="#" onclick="filterArticles('location','italy'); return false;">Italy</a><span>(1)</span></li>
+      <li><a href="#" onclick="filterArticles('location','los-angeles'); return false;">Los Angeles</a><span>(1)</span></li>
       <li><a href="#" onclick="filterArticles('location','texas'); return false;">Texas</a><span>(3)</span></li>
+      <li><a href="#" onclick="filterArticles('location','california'); return false;">California</a><span>(1)</span></li>
     </ul>
   </div>
   <div class="sidebar-section">
@@ -939,6 +971,7 @@
       <li><a href="#" onclick="filterArticles('artist','a-brief-memoir'); return false;">A Brief Memoir</a><span>(1)</span></li>
       <li><a href="#" onclick="filterArticles('artist','dead-butterflies'); return false;">Dead Butterflies</a><span>(1)</span></li>
       <li><a href="#" onclick="filterArticles('artist','folder'); return false;">Folder</a><span>(1)</span></li>
+      <li><a href="#" onclick="filterArticles('artist','myveronica'); return false;">MyVeronica</a><span>(1)</span></li>
       <li><a href="#" onclick="filterArticles('artist','toothpick'); return false;">Toothpick</a><span>(1)</span></li>
     </ul>
   </div>
@@ -947,7 +980,47 @@
     </div>
     <footer>© 2026 Significant Other</footer>
   </div>
-      
+
+    <!-- ==================== FULL ARTICLE: MYVERONICA ==================== -->
+<div class="full-article-page" id="page-myveronica-review">
+  <span class="back-btn" onclick="goHome()">Back to all articles</span>
+  <img src="i hope theres music in heaven.jpg" alt="A Brief Memoir album art" class="full-article-hero"/>
+  <div class="full-article-date">September 9, 2026</div>
+  <h1 class="full-article-title">I Hope There's Music in Heaven - MyVeronica</h1>
+  <div class="full-article-tags">
+    <span class="tag">Review</span>
+    <span class="tag">Alternative Rock</span>
+    <span class="tag">Emo</span>
+    <span class="tag">Shoegaze</span>
+    <span class="tag">Los Angeles</span>
+    <span class="tag">California</span>
+  </div>
+  <div class="full-article-body">
+    <p>When Sunday Drive Records posted on their Instagram page that they would be releasing an album titled <em>I Hope There’s Music in Heaven</em> for a band called MyVeronica, I was immediately drawn to it. I don’t really know why, but I essentially began telling myself that this would be the next album I write about despite the fact that it hadn’t been released yet and I had no idea of knowing how I would feel about the full record when it came out. It turns out that my gut was correct because after its release, I am excited to write about this wonderful album.</p>
+
+    <p>Released on August 21, 2026, <em>I Hope There’s Music in Heaven</em> is MyVeronica’s debut album and released by Sunday Drive Records, one of my favorite record labels. It really feels like a successor to the iconic 90’s alternative bands we know and love, where emo chords and heavy, distorted guitars meet over vulnerable and emotional lyrics. This makes all the more sense considering the band has listed groups like Mineral, Sunny Day Real Estate, and Sonic Youth as big inspirations for their work. And like its inspirations, <em>I Hope There’s Music in Heaven</em> is an amazing balance between soft, tender slowcore and emotionally charged walls of sound, transitioning between the two to paint a detailed picture of vulnerability and hope.</p>
+
+    <p>Speaking of hope, I think it’s something that is deeply foundational to the album as a whole. Even its title, <em>I Hope There’s Music in Heaven</em>, is one that evokes feelings of a worn yet persevering hopefulness. That things good and important to us might persist even if the world around us seems bleak and lost, a prayer that things will be fine despite the present and the past. For me, I think something that also characterizes the album is how it feels like a coming of age soundtrack. Being a young adult is scary, and if I am to characterize the aforementioned hope and perseverance it would be the kind from someone who may be a little lost finding their footing and searching for something meaningful. <em>I Hope There’s Music in Heaven</em> captures this bittersweetness, illustrating a defining period where you're forced to navigate a complicated world, make sense of it all, and figure out how to move forward. I was pretty happy to find that my analysis actually did align with the intention behind it, as MyVeronica’s website does actually say that the album tells a “story of early-20s angst and a desperate search to find the good in the world.” </p>
+
+    <p>This might be a reach on my end, but I like to think that the fact that I’m currently listening to this album at the end of summer adds another dimension. Almost like it has the vibe of a waning summer itself, a time characterized by brightness and hope making way for the much more muted autumn and winter. Metaphorically the oncoming of colder and darker times, maybe, but with the hope of knowing that spring and summer always roll around again. That’s just a little kind of headcanon I like to give it at the moment, but like I said, I like to think that the persistence of hope despite circumstances is foundational to <em>I Hope There’s Music in Heaven</em>. That kind of sounds like a bunch of nonsense from me though.</p>
+
+    <p>I’m pretty bummed I missed them in Houston, but I can’t wait for my preordered CD to arrive.</p>
+
+    <p><strong>Tracklist:</strong></p>
+      <ul class="tracklist">
+        <li>1. Sick Sad World</li>
+        <li>2. In This Eternal Life</li>
+        <li>3. Sacred Heart</li>
+        <li>4. Back of a Star</li>
+        <li>5. Sleepless</li>
+        <li>6. Canyon</li>
+        <li>7. Los Angeles</li>
+        <li>8. Cross</li>
+        <li>9. Sun Song</li>
+      </ul>
+  </div>
+</div>
+
   <!-- ==================== FULL ARTICLE: A BRIEF MEMOIR ==================== -->
 <div class="full-article-page" id="page-a-brief-memoir-review">
   <span class="back-btn" onclick="goHome()">Back to all articles</span>
@@ -1292,6 +1365,8 @@ function toggleMobileFilter(id) {
   // Human-readable display names for each filter value
   var filterLabels = {
   'alternative-metal': 'Alternative Metal',
+  'alternative-rock':  'Alternative Rock',
+  'california':       'California',
   'electronic':        'Electronic',
   'emo':               'Emo',
   'industrial-rock':   'Industrial Rock',
@@ -1300,11 +1375,13 @@ function toggleMobileFilter(id) {
   'post-hardcore':     'Post-Hardcore',
   'rap-metal':         'Rap Metal',
   'screamo':           'Screamo',
+  'shoegaze':          'Shoegaze',
   'skramz':            'Skramz',
   'dallas':            'Dallas',
   'fort-worth':        'Fort Worth',
   'houston':           'Houston',
   'italy':             'Italy',
+  'los-angeles':      'Los Angeles',
   'texas':             'Texas',
   'dead-butterflies':  'Dead Butterflies',
   'folder':            'Folder',
